@@ -1,0 +1,2 @@
+These are the datasets used for training and testing of the model. The datasets contains about 27,000 input samples with labels (0-25) mapped respectively for training. For testing there are almost 7,000 sanples.
+The size of the images used are 28X28 pixels.
