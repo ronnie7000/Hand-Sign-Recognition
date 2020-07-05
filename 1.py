@@ -7,8 +7,8 @@ from keras.layers import Conv2D, MaxPool2D, Dense, BatchNormalization, Flatten
 from keras.preprocessing.image import ImageDataGenerator
 
 
-train_data = pd.read_csv('sign_mnist_train.csv')
-test_data = pd.read_csv('sign_mnist_test.csv')
+train_data = pd.read_csv('train.csv')
+test_data = pd.read_csv('test.csv')
 
 X_train = train_data.iloc[:,1:785].values.reshape(-1,28,28,1)
 Y_train = train_data.iloc[:,0].values.reshape(27455,1)
