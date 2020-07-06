@@ -68,7 +68,7 @@ model.compile(optimizer = 'adam' , loss = 'categorical_crossentropy' , metrics =
 model.summary()
 
 #fitting the model
-history = model.fit(gen.flow(X_train,Y_train, batch_size = 512) ,epochs = 50 , validation_data = (X_test, Y_test))
+history = model.fit(gen.flow(X_train,Y_train, batch_size = 512) ,epochs =50 , validation_data = (X_test, Y_test))
 
 print("Accuracy of the model is : " , model.evaluate(X_test,Y_test)[1]*100 , "%")
 
