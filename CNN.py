@@ -36,23 +36,29 @@ gen.fit(X_train)
 #CNN model
 model = Sequential()
 
-model.add(Conv2D(75 , (3,3) , strides = 1 , padding = 'same' , activation = 'relu' , input_shape = (28,28,1)))
+model.add(Conv2D(70 , (3,3) , strides = 1 , padding = 'same' , activation = 'relu' , input_shape = (28,28,1)))
 model.add(BatchNormalization())
 
 model.add(MaxPool2D((2,2) , strides = 2 , padding = 'same'))
 
-model.add(Conv2D(50 , (3,3) , strides = 1 , padding = 'same' , activation = 'relu'))
+model.add(Conv2D(40 , (3,3) , strides = 1 , padding = 'same' , activation = 'relu'))
 model.add(BatchNormalization())
 
 model.add(MaxPool2D((2,2) , strides = 2 , padding = 'same'))
 
-model.add(Conv2D(25 , (3,3) , strides = 1 , padding = 'same' , activation = 'relu'))
+model.add(Conv2D(20 , (3,3) , strides = 1 , padding = 'same' , activation = 'relu'))
 model.add(BatchNormalization())
 
 model.add(MaxPool2D((2,2) , strides = 2 , padding = 'same'))
+
+model.add(Conv2D(5, (3,3), strides = 1, padding = 'same', activation = 'relu'))
+model.add(BatchNormalization())
+
+model.add(MaxPool2D((2,2), strides = 2, padding = 'same'))
+
 model.add(Flatten())
 
-model.add(Dense(units = 512 , activation = 'relu'))
+model.add(Dense(units = 50 , activation = 'relu'))
 
 model.add(Dense(units = 24 , activation = 'softmax'))
 
